@@ -10,3 +10,13 @@ class Contato(models.Model):
     
     def __str__(self):
         return self.nome
+class Livro(models.Model):
+    Titulo= models.CharField(max_length=150)
+    Nome_autor= models.CharField(max_length=200)
+    Assunto= models.CharField(max_length=200)
+    Editora= models.CharField(max_length=200)
+    ISBN = models.CharField(max_length=20)
+    Ano_publicacao = models.DateField()
+
+    def __str__(self):
+        return self.Titulo
