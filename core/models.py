@@ -42,3 +42,28 @@ class Despesa(models.Model):
 
     def __str__(self):
         return self.datacriacao
+
+class Apartamento(models.Model):
+    numero = models.PositiveIntegerField()
+    qtdQuartos = models.PositiveIntegerField()
+    proprietario = models.CharField(max_length=30)
+    valorCondominio = models.DecimalField(decimal_places=2,max_digits=9)
+
+
+def __str__(self):
+    return self.numero
+
+class Anuncio(models.Model):
+    cliente = models.CharField(max_length=30)
+    textoTitulo = models.CharField(max_length=30)
+    preco = models.DecimalField(max_digits=7, decimal_places=2)
+    textoAnuncio = models.CharField(max_length=200)
+    nomeContato = models.CharField(max_length=30)
+    telefone = models.CharField(max_length=15)
+    secao = models.CharField(max_length=30)
+    tipoAnuncio = models.CharField(max_length=30)
+
+
+def __str__(self):
+    return self.cliente
+

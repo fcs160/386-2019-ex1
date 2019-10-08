@@ -21,4 +21,17 @@ class DespesaAdmin(admin.ModelAdmin):
    list_display = ('datacriacao','tipodespesa','descricao','formapagamento','vencimento','quitado')
 
 admin.site.register(Despesa, DespesaAdmin)
+
+class AnuncioAdmin(admin.ModelAdmin):
+    list_display = ('cliente', 'textoTitulo', 'preco', 'textoAnuncio', 'nomeContato', 'telefone', 'secao', 'tipoAnuncio')
+
+
+admin.site.register(Anuncio, AnuncioAdmin)
+
+class ApartamentoAdmin(admin.ModelAdmin):
+    list_display = ('numero', 'qtdQuartos', 'proprietario', 'valorCondominio')
+
+
+admin.site.register(Apartamento, ApartamentoAdmin)
+
 # Register your models here.
